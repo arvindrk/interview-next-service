@@ -5,7 +5,7 @@ import { Room } from 'livekit-client'
 import { CallInterface } from '@/components/call-interface'
 import { createRoom, getToken, generateRoomName } from '@/lib/livekit'
 
-const LIVEKIT_URL = process.env.NEXT_PUBLIC_LIVEKIT_URL!
+const LIVEKIT_URL = 'wss://interview-server-alice-uarcqz7r.livekit.cloud'
 
 export default function CallPage() {
   const [room, setRoom] = useState<Room | null>(null)
