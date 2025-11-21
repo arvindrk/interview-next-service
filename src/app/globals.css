@@ -3,11 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,6 +24,10 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
   }
 }
 
@@ -23,4 +35,64 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+[data-lk-theme="default"] {
+  --lk-bg: #18181b;
+  --lk-bg2: #27272a;
+  --lk-bg3: #3f3f46;
+  --lk-control-bar-height: 80px;
+  --lk-border-radius: 1rem;
+}
+
+/* Participant Tiles */
+.lk-participant-tile {
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.lk-participant-tile:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Participant Name Badge */
+.lk-participant-name {
+  background: rgba(0, 0, 0, 0.75) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-radius: 0.5rem !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0.75rem !important;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3) !important;
+}
+
+/* Control Bar Buttons */
+.lk-button {
+  border: none !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.lk-button:hover {
+  transform: translateY(-1px) !important;
+}
+
+.lk-button:active {
+  transform: scale(0.95) !important;
+}
+
+/* Grid Layout */
+.lk-grid-layout {
+  gap: 1rem !important;
+}
+
+/* Focus Ring for Accessibility */
+.lk-button:focus-visible {
+  outline: 2px solid white !important;
+  outline-offset: 2px !important;
 }
